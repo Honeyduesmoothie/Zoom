@@ -10,11 +10,24 @@ html(lang="en")
             h1 Noom
         main
             h2 Welcome to Noom
-            ul
-            form#nickForm
-                input(placeholder="Set your nickname" required) 
-                button Set
-            form#messageForm
-                input(placeholder="Enter your message" required)
-                button Send
+            div#nickname
+                h3 
+                form
+                    input(placeholder="Choose/Change your nickname" required)
+                    button Done
+            h3 Open rooms
+            ul#roomList
+            div#enterRoom
+                form
+                    input(placeholder="Enter a room" required type="text")
+                    button Enter
+            div#room
+                h3
+                span#userCount 
+                ul#messageList
+                form
+                    input(placeholder="Send a message" required type="text")
+                    button Send
+                button#leave Leave the room
+        script(src="/socket.io/socket.io.js")
         script(src="js/app.js")
